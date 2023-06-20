@@ -29,20 +29,6 @@ class FlavorConfig {
 
   static bool isQA() => _instance!.flavor == Flavor.QA;
 
-  static String appName() {
-    if (_instance!.flavor == Flavor.QA) {
-      return "Github List QA";
-    } else if (_instance!.flavor == Flavor.DEV) {
-      return "Github List Dev";
-    } else {
-      return "Github List";
-    }
-  }
-
-  static String enumName(String enumToString) {
-    List<String> paths = enumToString.split(".");
-    return paths[paths.length - 1];
-  }
   static final Map<Flavor,String> _map = {
     Flavor.PRODUCTION:"Prod",
     Flavor.DEV:"Dev",
